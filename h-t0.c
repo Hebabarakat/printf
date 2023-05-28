@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdarg.h>
 
 /**
  *_printf - formated output conversion and print data.
@@ -10,8 +11,7 @@
 int _printf(const char *format, ...)
 {
   unsigned int a ;
-  va_list arguments;
-  int (*function) (va_list, char*, unsigned int);
+  va_list argument;
 char c;
 char *s;
 
@@ -19,12 +19,12 @@ char *s;
   for (a = 0; format[a] != '\0'; a++)
     {
       if (format[a] == '%')
+
 	{
-	go-to format[a+1];
 	  if ( format [a+1] == 'c')
 	c = va_arg(argument, char);
 	  else if (format[a+1] == 's')
-	s = va_ arg(argument, char*);
+	s = va_arg(argument, char*);
 	}
 	va_arg(argument, char);	
 	}
