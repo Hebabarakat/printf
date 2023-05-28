@@ -22,11 +22,13 @@ char *s;
 
 	{
 	  if ( format [a+1] == 'c')
-	c = va_arg(argument, char);
+	    c = (char) va_arg(argument,int);
+	  putchar (c);
 	  else if (format[a+1] == 's')
 	s = va_arg(argument, char*);
+	  putchar (s);
 	}
-	va_arg(argument, char);	
+	va_arg(argument, int);	
 	}
   va_end(argument);
   return (a);
