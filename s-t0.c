@@ -5,20 +5,20 @@
 #include <unistd.h>
 
 /**
+ *_printf - formated output conversion and print data.
+ *@format: input string.
  *
- *
- *
- *
- *
+ *Return: "0" always sucsses.
  */
+
 int _printf(const char *format, ...)
 {
 const char *s;
 va_list arg;
-int a; 
-char *x; 
+int a;
+char *x;
 
-va_start (arg, format);
+va_start(arg, format);
 
 for (s = format; *s != '\0'; s++)
 {
@@ -46,5 +46,5 @@ while (*s != '%')
 }
 
 va_end(arg);
-return(0);	
+return (0);
 }
