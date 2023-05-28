@@ -12,8 +12,8 @@ int _printf(const char *format, ...)
 {
   unsigned int a ;
   va_list argument;
-char c;
-char *s;
+int c;
+int s;
 
   va_start(argument, format);
   for (a = 0; format[a] != '\0'; a++)
@@ -22,10 +22,11 @@ char *s;
 
 	{
 	  if ( format [a+1] == 'c')
-	    c = (char) va_arg(argument,int);
+	    c = (int) va_arg(argument,int);
 	  putchar (c);
+	}
 	  else if (format[a+1] == 's')
-	s = va_arg(argument, char*);
+	s = va_arg(argument, int);
 	  putchar (s);
 	}
 	va_arg(argument, int);	
