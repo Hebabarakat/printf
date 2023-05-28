@@ -20,6 +20,7 @@ char *s;
     {
       if (format[a] == '%')
 	{
+	go-to format[a+1];
 	  if ( format [a+1] == 'c')
 	c = va_arg(argument, char);
 	  else if (format[a+1] == 's')
@@ -27,3 +28,6 @@ char *s;
 	}
 	va_arg(argument, char);	
 	}
+  va_end(argument);
+  return (a);
+ }
