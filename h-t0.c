@@ -1,5 +1,7 @@
 #include "main.h"
 #include <stdarg.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
  *_printf - formated output conversion and print data.
@@ -10,27 +12,34 @@
 
 int _printf(const char *format, ...)
 {
-  unsigned int a ;
-  va_list argument;
-int c;
-int s;
+	unsigned int i = 0, len = 0, ibuf = 0;
+	va_list arguments;
+	int (*function)(va_list, char *, unsigned int);
+	char *buffer;
 
-  va_start(argument, format);
-  for (a = 0; format[a] != '\0'; a++)
-    {
-      if (format[a] == '%')
-
+	va_start(arguments, format);
+	if (format[i] == '%' && !format[i + 1])
+		return (-1);
+	if (!format[i])
+		return (0);
+	for (i = 0; format && format[i]; i++)
 	{
-	  if ( format [a+1] == 'c')
-	    c = (int) va_arg(argument,int);
-	  putchar (c);
-	}
-	  else if (format[a+1] == 's')
-	s = va_arg(argument, int);
-	  putchar (s);
-	}
-	va_arg(argument, int);	
-	}
-  va_end(argument);
-  return (a);
- }
+		if (format[i] == '%')
+		{
+			if (format[i + 1] == '\0')
+			{	printf(buffer, ibuf), va_end(arguments);
+				return (-1);
+				{
+				if (function == NULL)
+				{
+					if (format[i + 1] == ' ' && !format[i + 2])
+						return (-1);
+}
+				else
+				{
+					len += function(arguments, buffer, ibuf);
+					i += (i + 1);
+				}
+			} i++;
+		}
+			va_end(arguments);
