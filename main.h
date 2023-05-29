@@ -6,9 +6,14 @@
 #include <unistd.h>
 int _printf(const char *format, ...);
 int _printchar(char x);
-
-typedef struct conv_spec {
-	char spec;
+/**
+ *struct conv_spec - function' description in 'conv_spec'
+ *@spec: member 1
+ *@fuction: member 2
+ */
+typedef struct conv_spec
+{
+	char *spec;
 	int (*fuction)(va_list arg);
 } conv;
 int conv_c(va_list arg);
