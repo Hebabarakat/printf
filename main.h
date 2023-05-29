@@ -1,6 +1,5 @@
 #ifndef MAIN_H
 #define MAIN_H
-#include"main.h"
 #include<stdarg.h>
 #include<stdio.h>
 #include<string.h>
@@ -14,5 +13,5 @@ typedef struct conv_spec {
 } conv;
 int conv_c(va_list arg);
 int conv_s(va_list arg);
-int conv_P(va_list arg);
+int conv_p(va_list arg);
 #endif/*main.h*/
