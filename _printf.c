@@ -9,7 +9,7 @@ int _printf(const char *format, ...)
 {
 va_list arg;
 int i, j, count;
-conv_t array[] = { 
+conv_t array[] = {
 {"c", conv_c},
 {"s", conv_s},
 {"%", conv_p},
@@ -27,7 +27,7 @@ if (format[i] == '%')
 i++;
 if (format[i] == '\0')
 {
-return(-1);
+return (-1);
 }
 j = 0;
 while (array[j].spec != NULL)
@@ -38,5 +38,5 @@ j++;
 i++;
 }
 va_end(arg);
-return(count);
+return (count);
 }

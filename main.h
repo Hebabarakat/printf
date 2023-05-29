@@ -9,7 +9,7 @@ int _printf(const char *format, ...);
 /**
  *struct conv_spec - function' description in 'conv_spec'
  *@spec: member 1
- *@fuction: member 2
+ *@function: member 2
  */
 typedef struct conv_spec
 {
