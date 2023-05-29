@@ -1,4 +1,4 @@
-#include <main.h>
+#include "main.h"
 /**
  * conv_c - prints characters
  * @arg: argument parameters
@@ -6,7 +6,7 @@
  */
 int conv_c(va_list arg)
 {
-print_char((va_arg)(arg, int));
+_printchar(va_arg(arg, int));
 return (1);
 }
 
@@ -25,7 +25,7 @@ char *str;
 	if (str == NULL)
 		str = "(null)";
 	for (i = 0; str[i]; i++)
-		print_char (str[i]);
+		_printchar (str[i]);
 
 	return (i);
 }
@@ -37,6 +37,6 @@ char *str;
 int conv_p(va_list arg)
 {
 	(void)arg;
-	print_char('%');
+	_printchar('%');
 	return (1);
 }
