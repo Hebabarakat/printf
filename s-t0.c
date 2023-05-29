@@ -13,38 +13,35 @@
 
 int _printf(const char *format, ...)
 {
-const char *s;
 va_list arg;
-int a;
-char *x;
-
+int a, i;
+int count;
+i = 0;
+count = 0;
 va_start(arg, format);
 
-for (s = format; *s != '\0'; s++)
+while (format[i] != '\0')
 {
-while (*s != '%')
+if (format[i] != '%')
 {
-	write(1, s, strlen(s));
-	s++;
+	count += write(1,&format[i], 1);
+	i++;
 }
-		s++;
-	switch (*s)
+else if (format[i] == '%')
+{
+		i++;
+	switch (format[i])
 	{
 	case 'c':
 		{
 	a =  va_arg(arg, int);
-	write(1, &a, sizeof(a));
+	count = write(1, &a, 1);
 	break;
 	}
-	case 's':
-	{
-	x =  va_arg(arg, char*);
-	write(1, x, strlen(x));
-	break;
 	}
 	}
 }
 
 va_end(arg);
-return (0);
+return (count);
 }

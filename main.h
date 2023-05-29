@@ -10,7 +10,9 @@ int _printchar(char x);
 
 typedef struct conv_spec {
 	char spec;
-	int (*fuction)(valist arg);
+	int (*fuction)(va_list arg);
 } conv;
-
+int conv_c(va_list arg);
+int conv_s(va_list arg);
+int conv_P(va_list arg);
 #endif/*main.h*/
