@@ -15,7 +15,7 @@ x = va_arg(arg, int);
 if (x < 0)
 {
 	value = (x * -1);
-	count += _printchar('_');
+	count += _printchar('-');
 }
 else
 value = x;
