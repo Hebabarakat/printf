@@ -28,7 +28,7 @@ camp /= 10;
 counting *= 10;
 }
 
-while (counting > 2)
+while (counting >= 1)
 {
 count += _printchar(((value / counting) % 10) + '0');
 counting /= 10;
