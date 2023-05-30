@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * conv-num_i - prints %
- * @arg: argument parameters
- * Return: 1
+ *conv_num_i - prints %
+ *@arg: argument parameters
+ *Return: 1
  */
 
 int conv_num_i(va_list arg)
@@ -28,18 +28,18 @@ camp /= 10;
 counting *= 10;
 }
 
-while (counting >= 1)
+while (counting > 2)
 {
-count += _printchar((( value / counting ) % 10 ) + '0' );
+count += _printchar(((value / counting) % 10) + '0');
 counting /= 10;
 }
 return (count);
 }
 
 /**
- * conv-num_d - prints %
- * @arg: argument parameters
- * Return: 1
+ *conv_num_d - prints %
+ *@arg: argument parameters
+ *Return: 1
  */
 int conv_num_d(va_list arg)
 {

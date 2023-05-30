@@ -1,10 +1,9 @@
 #include"main.h"
 /**
- *
- *
- *
- *
- *
+ *_switch - convert specifier
+ *@arg: input 1
+ *@x: input 2
+ *Return: count always success
  */
 int _switch(va_list arg, char x)
 {
