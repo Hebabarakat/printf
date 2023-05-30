@@ -30,7 +30,7 @@ counting *= 10;
 
 while (counting >= 1)
 {
-count += _printchar(((value / counting) % 10 ) + '0');
+count += _printchar((( value / counting ) % 10 ) + '0' );
 counting /= 10;
 }
 return (count);

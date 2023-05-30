@@ -27,9 +27,8 @@ count += _switch(arg, format[i]);
 }
 else
 return (-1);
-
 }
-else 
+else
 {
 count += _printchar(format[i]);
 }
