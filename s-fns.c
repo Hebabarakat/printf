@@ -1,4 +1,4 @@
-#include "s.h"
+#include "main.h"
 /**
  * conv-num_i - prints %
  * @arg: argument parameters
