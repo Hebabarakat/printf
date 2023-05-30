@@ -41,9 +41,9 @@ break;
 }
 default:
 {
-count += _printchar('%');
-count += _printchar(x);
-break;
+        count += _printchar('%');
+        count += _printchar(x);
+                break;
 }
 }
 return (count);
